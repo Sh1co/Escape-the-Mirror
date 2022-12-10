@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/level.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Follower.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scenes/FrameWithCollision.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Mirror.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scripts/mirror_reverse.gd" type="Script" id=5]
 
@@ -39,10 +38,14 @@ shape = SubResource( 2 )
 
 [node name="Follower" parent="." instance=ExtResource( 2 )]
 
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="Follower"]
+
 [node name="Mirror" parent="." instance=ExtResource( 4 )]
 
-[node name="FrameWithCol" parent="." instance=ExtResource( 3 )]
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="Mirror"]
 
 [connection signal="area_entered" from="MirrorReverse" to="MirrorReverse" method="_on_MirrorReverse_area_entered"]
-[connection signal="area_entered" from="FrameWithCol" to="." method="_on_FrameWithCol_area_entered"]
-[connection signal="area_exited" from="FrameWithCol" to="." method="_on_FrameWithCol_area_exited"]
+[connection signal="screen_entered" from="Follower/VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_entered"]
+[connection signal="screen_exited" from="Follower/VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
+[connection signal="screen_entered" from="Mirror/VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_entered"]
+[connection signal="screen_exited" from="Mirror/VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

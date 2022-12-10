@@ -6,10 +6,16 @@ signal connected
 
 var og_pos = Vector2.ZERO
 var following = false
+var mouseDelta : Vector2 = Vector2()
 
 
 func _ready():
 	og_pos = position
+
+
+func _input(event):
+	if event is InputEventMouseMotion:
+		mouseDelta = event.relative
 
 
 func _process(_delta):
@@ -25,7 +31,8 @@ func reset():
 
 
 func _follow():
-	position = get_viewport().get_mouse_position()
+	position += mouseDelta
+	mouseDelta=Vector2.ZERO
 
 
 func _on_Follower_body_entered(body):
@@ -35,5 +42,5 @@ func _on_Follower_body_entered(body):
 
 func _on_Follower_mouse_entered():
 	following = true
-	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	emit_signal("connected")
