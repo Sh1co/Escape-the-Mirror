@@ -3,6 +3,7 @@ extends Area2D
 
 signal disconnected
 signal connected
+signal lost
 
 var og_pos = Vector2.ZERO
 var following = false
@@ -16,6 +17,8 @@ func _ready():
 func _input(event):
 	if event is InputEventMouseMotion:
 		mouseDelta = event.relative
+	if event.is_action_pressed("ui_cancel"):
+		reset()
 
 
 func _process(_delta):
@@ -28,6 +31,8 @@ func reset():
 	position = og_pos
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	emit_signal("disconnected")
+	if $Hint != null:
+		$Hint.visible = true
 
 
 func _follow():
@@ -37,10 +42,11 @@ func _follow():
 
 func _on_Follower_body_entered(body):
 	if body.is_in_group("Obstacle"):
-		reset()
+		emit_signal("lost")
 
 
 func _on_Follower_mouse_entered():
 	following = true
+	$Hint.visible = false
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	emit_signal("connected")
