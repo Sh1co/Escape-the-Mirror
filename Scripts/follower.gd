@@ -7,7 +7,7 @@ signal lost
 
 var og_pos = Vector2.ZERO
 var following = false
-var mouseDelta : Vector2 = Vector2()
+var mouseDelta: Vector2 = Vector2()
 
 
 func _ready():
@@ -37,7 +37,7 @@ func reset():
 
 func _follow():
 	position += mouseDelta
-	mouseDelta=Vector2.ZERO
+	mouseDelta = Vector2.ZERO
 
 
 func _on_Follower_body_entered(body):
