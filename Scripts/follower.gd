@@ -31,7 +31,7 @@ func reset():
 	position = og_pos
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	emit_signal("disconnected")
-	if $Hint != null:
+	if get_node_or_null("Hint") != null:
 		$Hint.visible = true
 
 
