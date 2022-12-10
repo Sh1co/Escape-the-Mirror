@@ -20,7 +20,7 @@ func _load_level(index):
 	level.connect("level_complete", self, "_on_level_complete")
 	level.connect("level_failed", self, "_reload_current_level")
 	level.coins_manager = coins_manager
-	add_child(level)
+	call_deferred("add_child", level)
 	
 func _reload_current_level():
 	_load_level(current_level_index)
