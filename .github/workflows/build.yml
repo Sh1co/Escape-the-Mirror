@@ -17,7 +17,7 @@ jobs:
         id: build
         uses: manleydev/build-godot-action@v1.4.1
         with:
-          name: Escape the Mirror
+          name: EscapeTheMirror
           preset: ${{ matrix.platform }}
           debugMode: "false"
       - name: Upload Artifact
