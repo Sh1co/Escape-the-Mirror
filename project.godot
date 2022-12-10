@@ -9,6 +9,16 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Area2D",
+"class": "Follower",
+"language": "GDScript",
+"path": "res://Scripts/follower.gd"
+}, {
+"base": "SGamePlayLevel",
+"class": "Level",
+"language": "GDScript",
+"path": "res://Scripts/level.gd"
+}, {
 "base": "SCollectable",
 "class": "SCoin",
 "language": "GDScript",
@@ -90,6 +100,8 @@ _global_script_classes=[ {
 "path": "res://Project S/Scripts/s_stationary_enemy.gd"
 } ]
 _global_script_class_icons={
+"Follower": "",
+"Level": "",
 "SCoin": "",
 "SCoinsCounterUI": "",
 "SCoinsManager": "",
@@ -113,6 +125,11 @@ _global_script_class_icons={
 config/name="Escape the Mirror"
 run/main_scene="res://Scenes/Game.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=1320
+window/size/height=760
 
 [gui]
 
