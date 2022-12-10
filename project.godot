@@ -111,6 +111,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Escape the Mirror"
+run/main_scene="res://Scenes/Game.tscn"
 config/icon="res://icon.png"
 
 [gui]
