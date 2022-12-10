@@ -12,7 +12,7 @@ func _ready():
 	og_pos = position
 
 
-func _process(delta):
+func _process(_delta):
 	if following:
 		_follow()
 
