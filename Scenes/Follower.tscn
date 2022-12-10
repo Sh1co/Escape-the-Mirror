@@ -1,7 +1,17 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/follower.gd" type="Script" id=1]
 [ext_resource path="res://Art/cursor.png" type="Texture" id=2]
+[ext_resource path="res://Art/Fonts/DraconianMechanicalPencil001.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Scripts/start_hint.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 171
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 19
+font_data = ExtResource( 3 )
 
 [node name="Follower" type="Area2D" groups=["Player"]]
 position = Vector2( 506, 372 )
@@ -14,6 +24,37 @@ texture = ExtResource( 2 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PoolVector2Array( -8, 15, -8, -19, -6, -19, 15, 3, 15, 7, 7, 7, 12, 17, 6, 19, 2, 9 )
+
+[node name="Hint" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -152.0
+margin_top = -167.0
+margin_right = -152.0
+margin_bottom = -167.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource( 4 )
+
+[node name="Tween" type="Tween" parent="Hint"]
+
+[node name="Label" type="Label" parent="Hint"]
+margin_left = 104.0
+margin_top = 85.0
+margin_right = 202.0
+margin_bottom = 257.0
+custom_fonts/font = SubResource( 1 )
+text = "o"
+
+[node name="Text" type="Label" parent="Hint"]
+margin_left = 66.0
+margin_top = 69.0
+margin_right = 236.0
+margin_bottom = 112.0
+custom_fonts/font = SubResource( 2 )
+text = "Move your mouse 
+here to start"
+align = 1
 
 [connection signal="body_entered" from="." to="." method="_on_Follower_body_entered"]
 [connection signal="mouse_entered" from="." to="." method="_on_Follower_mouse_entered"]
