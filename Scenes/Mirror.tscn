@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/mirror.gd" type="Script" id=1]
+[ext_resource path="res://Art/cursor.png" type="Texture" id=2]
+
+[node name="Mirror" type="Area2D" groups=["Player"]]
+position = Vector2( 668, 367 )
+script = ExtResource( 1 )
+follower_path = NodePath("../Follower")
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -2.38419e-07 )
+scale = Vector2( 0.162393, 0.162393 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -8, 15, -8, -19, -6, -19, 15, 3, 15, 7, 7, 7, 12, 17, 6, 19, 2, 9 )
+
+[connection signal="body_entered" from="." to="." method="_on_Follower_body_entered"]
+[connection signal="mouse_entered" from="." to="." method="_on_Follower_mouse_entered"]
