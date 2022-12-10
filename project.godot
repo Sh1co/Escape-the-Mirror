@@ -8,6 +8,106 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "SCollectable",
+"class": "SCoin",
+"language": "GDScript",
+"path": "res://Project S/Scripts/s_coin.gd"
+}, {
+"base": "Node2D",
+"class": "SCoinsCounterUI",
+"language": "GDScript",
+"path": "res://Project S/Scripts/s_coins_counter.gd"
+}, {
+"base": "Node",
+"class": "SCoinsManager",
+"language": "GDScript",
+"path": "res://Project S/Scripts/s_coins_manager.gd"
+}, {
+"base": "Node2D",
+"class": "SCollectable",
+"language": "GDScript",
+"path": "res://Project S/Scripts/s_collectable.gd"
+}, {
+"base": "RigidBody2D",
+"class": "SEnemy",
+"language": "GDScript",
+"path": "res://Project S/Scripts/s_enemy.gd"
+}, {
+"base": "Node2D",
+"class": "SEntitySpawner",
+"language": "GDScript",
+"path": "res://Project S/Scripts/s_entity_spawner.gd"
+}, {
+"base": "SEntitySpawner",
+"class": "SFixedEntitySpawner",
+"language": "GDScript",
+"path": "res://Project S/Scripts/s_fixed_entity_spawner.gd"
+}, {
+"base": "Node2D",
+"class": "SGame",
+"language": "GDScript",
+"path": "res://Project S/Scripts/s_game.gd"
+}, {
+"base": "SLevel",
+"class": "SGamePlayLevel",
+"language": "GDScript",
+"path": "res://Project S/Scripts/s_gameplay_level.gd"
+}, {
+"base": "ProgressBar",
+"class": "SHealthBar",
+"language": "GDScript",
+"path": "res://Project S/Scripts/s_healthbar.gd"
+}, {
+"base": "Node2D",
+"class": "SLevel",
+"language": "GDScript",
+"path": "res://Project S/Scripts/s_level.gd"
+}, {
+"base": "SLevel",
+"class": "SMainMenu",
+"language": "GDScript",
+"path": "res://Project S/Scripts/s_main_menu.gd"
+}, {
+"base": "RigidBody2D",
+"class": "SPlayer",
+"language": "GDScript",
+"path": "res://Project S/Scripts/s_player.gd"
+}, {
+"base": "Area2D",
+"class": "SProjectile",
+"language": "GDScript",
+"path": "res://Project S/Scripts/s_projectile.gd"
+}, {
+"base": "Node2D",
+"class": "SProjectileShooter",
+"language": "GDScript",
+"path": "res://Project S/Scripts/s_projectile_shooter.gd"
+}, {
+"base": "SEnemy",
+"class": "SStationaryEnemy",
+"language": "GDScript",
+"path": "res://Project S/Scripts/s_stationary_enemy.gd"
+} ]
+_global_script_class_icons={
+"SCoin": "",
+"SCoinsCounterUI": "",
+"SCoinsManager": "",
+"SCollectable": "",
+"SEnemy": "",
+"SEntitySpawner": "",
+"SFixedEntitySpawner": "",
+"SGame": "",
+"SGamePlayLevel": "",
+"SHealthBar": "",
+"SLevel": "",
+"SMainMenu": "",
+"SPlayer": "",
+"SProjectile": "",
+"SProjectileShooter": "",
+"SStationaryEnemy": ""
+}
+
 [application]
 
 config/name="Escape the Mirror"
