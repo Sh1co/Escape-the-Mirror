@@ -22,7 +22,7 @@ margin_top = 333.0
 margin_right = 379.0
 margin_bottom = 404.0
 custom_fonts/font = SubResource( 1 )
-text = "Get your cursors
+text = "Get your cursor
 out of the screen!"
 align = 1
 

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/BaseDialogue.tscn" type="PackedScene" id=1]
+
+[node name="SLevel" instance=ExtResource( 1 )]
+messages = [ "Oh, in this real, we have coins too!", "They are pretty much useless, but are nice to have.", "You can collect coins with either of your cursors." ]

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/BaseDialogue.tscn" type="PackedScene" id=1]
+
+[node name="SLevel" instance=ExtResource( 1 )]
+messages = [ "Did you see this?", "That's your cursor's reflection", "Since it's the refection of your cursor anything that happens to it will also happen to your cursor!", "So you need to avoid refraction for the reflection too.", "Also, if you didn't notice, its movement is reversed because... mirrors and stuff. " ]

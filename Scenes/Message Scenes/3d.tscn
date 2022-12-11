@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/BaseDialogue.tscn" type="PackedScene" id=1]
+
+[node name="SLevel" instance=ExtResource( 1 )]
+messages = [ "Good thing you made it out there, that was tough!", "We are half way there!" ]

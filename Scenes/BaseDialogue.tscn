@@ -13,10 +13,9 @@ font_data = ExtResource( 2 )
 
 [node name="SLevel" type="Node2D"]
 script = ExtResource( 1 )
-messages = [ "Hey, what's up!", "Cool, no need to answer." ]
 
 [node name="MessageDelay" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 5.0
 
 [node name="Dialogue" type="Label" parent="."]
 margin_left = 270.0
@@ -37,6 +36,8 @@ margin_top = 679.0
 margin_right = 1255.0
 margin_bottom = 695.0
 custom_fonts/font = SubResource( 2 )
-text = "Press Enter or Space to skip"
+text = "Press Enter or Space for next message"
+align = 1
+autowrap = true
 
 [connection signal="timeout" from="MessageDelay" to="." method="show_next_msg"]

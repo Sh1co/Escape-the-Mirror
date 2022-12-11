@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/BaseDialogue.tscn" type="PackedScene" id=1]
+
+[node name="SLevel" instance=ExtResource( 1 )]
+messages = [ "Uhm hey... you are not supposed to be here!", "Not again...", "Ok, we'll need to work together you get you out of here.", "Your cursor is currently in the mirror dimension! (Totally different from the Dr. Strange mirror dimension for legal reasons)", "You'll need to get your cursor out of the mirror window (game window)", "However, since this is an old mirror, it has some weird light refractions you need to avoid!", "They distort you and reset some of your progress.", "You'll know them when you see them, they kinda look like stuff drawn in MS Paint." ]
