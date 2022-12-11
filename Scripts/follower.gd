@@ -5,6 +5,8 @@ signal disconnected
 signal connected
 signal lost
 
+export(PackedScene) var fail_ps
+
 var og_pos = Vector2.ZERO
 var following = false
 var mouseDelta: Vector2 = Vector2()
@@ -17,8 +19,6 @@ func _ready():
 func _input(event):
 	if event is InputEventMouseMotion:
 		mouseDelta = event.relative
-	if event.is_action_pressed("ui_cancel"):
-		reset()
 
 
 func _process(_delta):
@@ -42,6 +42,8 @@ func _follow():
 
 func _on_Follower_body_entered(body):
 	if body.is_in_group("Obstacle"):
+		if fail_ps!=null:
+			_spawn_fail_sign()
 		emit_signal("lost")
 
 
@@ -50,3 +52,9 @@ func _on_Follower_mouse_entered():
 	$Hint.visible = false
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	emit_signal("connected")
+	
+	
+func _spawn_fail_sign():
+	var fail = fail_ps.instance()
+	fail.position = position
+	get_parent().add_child(fail)
