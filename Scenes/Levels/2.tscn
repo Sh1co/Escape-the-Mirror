@@ -33,19 +33,19 @@ position = Vector2( 640, 360 )
 polygon = PoolVector2Array( 615, -107.9, 615, -106.1, 640, -97.1, 640, 360, 540.7, 360, 525, 343.2, 525, 340.7, 512, 316.8, 512, 309, 505, 248.2, 505, 203.7, 509.4, 177.7, 499.4, 121, 501.4, 121, 504.5, 104, 506.4, 104, 518, 86.2, 518, 83.4, 513, 65.4, 513, 61.7, 515.4, 48, 509, 1.20001, 509, -49.4, 511.7, -59, 513.1, -59, 519.1, -71, 520.9, -71, 550.8, -98, 553.6, -98, 586, -107.3, 586, -109.1 )
 
 [node name="Label" type="Label" parent="." index="5"]
-margin_left = 850.0
-margin_top = 523.0
-margin_right = 1157.0
-margin_bottom = 631.0
+margin_left = 833.0
+margin_top = 515.473
+margin_right = 1140.0
+margin_bottom = 623.473
 custom_fonts/font = SubResource( 1 )
 text = "A coin!"
 align = 1
 
 [node name="Label2" type="Label" parent="." index="6"]
-margin_left = 833.0
-margin_top = 620.0
-margin_right = 1140.0
-margin_bottom = 728.0
+margin_left = 816.0
+margin_top = 612.473
+margin_right = 1123.0
+margin_bottom = 720.473
 rect_rotation = -19.8954
 custom_fonts/font = SubResource( 1 )
 text = "<-"
