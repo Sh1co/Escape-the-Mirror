@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Project S/Scripts/s_game.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/MainMenu.tscn" type="PackedScene" id=2]
@@ -16,10 +16,12 @@
 [ext_resource path="res://Sound/POL-the-foyer-short.wav" type="AudioStream" id=14]
 [ext_resource path="res://Sound/mixkit-failure-arcade-alert-notification-240.wav" type="AudioStream" id=15]
 [ext_resource path="res://Sound/mixkit-arcade-bonus-alert-767.wav" type="AudioStream" id=16]
+[ext_resource path="res://Sound/mixkit-medieval-show-fanfare-announcement-226.wav" type="AudioStream" id=17]
+[ext_resource path="res://Scenes/WinScreen.tscn" type="PackedScene" id=18]
 
 [node name="Game" type="Node2D"]
 script = ExtResource( 1 )
-levels = [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ]
+levels = [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 18 ) ]
 
 [node name="BGMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 13 )
@@ -35,3 +37,7 @@ stream = ExtResource( 15 )
 
 [node name="WinSfx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 16 )
+
+[node name="FinishSfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 17 )
+volume_db = -10.0
