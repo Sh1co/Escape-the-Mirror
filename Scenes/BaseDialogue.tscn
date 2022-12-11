@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/dialogue.gd" type="Script" id=1]
+[ext_resource path="res://Art/Fonts/DraconianMechanicalPencil001.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Art/Fonts/BaksoSapi.otf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 37
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 2 )
+
+[node name="SLevel" type="Node2D"]
+script = ExtResource( 1 )
+messages = [ "Hey, what's up!", "Cool, no need to answer." ]
+
+[node name="MessageDelay" type="Timer" parent="."]
+wait_time = 2.0
+
+[node name="Dialogue" type="Label" parent="."]
+margin_left = 270.0
+margin_top = 44.0
+margin_right = 1025.0
+margin_bottom = 635.0
+custom_fonts/font = SubResource( 1 )
+text = "Uhm hey... you are not supposed to be here!"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="Label" type="Label" parent="."]
+margin_left = 1026.0
+margin_top = 679.0
+margin_right = 1255.0
+margin_bottom = 695.0
+custom_fonts/font = SubResource( 2 )
+text = "Press Enter or Space to skip"
+
+[connection signal="timeout" from="MessageDelay" to="." method="show_next_msg"]
