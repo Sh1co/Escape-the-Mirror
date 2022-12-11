@@ -9,6 +9,7 @@ onready var finish_sfx = $"../FinishSfx"
 func _ready():
 	gameplay_music.playing = false
 	finish_sfx.playing = true
+	$WinMessege.modulate.a = 0
 	tween.interpolate_property($WinMessege, "modulate:a", 0, 1, 5)
 	tween.start()
 

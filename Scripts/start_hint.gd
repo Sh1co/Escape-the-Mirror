@@ -8,6 +8,7 @@ func _ready():
 
 
 func flashing_effect():
+	self.modulate.a = 0
 	tween.interpolate_property(self, "modulate:a", 0, 1, 2)
 	tween.start()
 	yield(tween, "tween_completed")

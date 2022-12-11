@@ -35,8 +35,9 @@ margin_left = 1026.0
 margin_top = 679.0
 margin_right = 1255.0
 margin_bottom = 695.0
+custom_colors/font_color = Color( 0.905882, 1, 0.054902, 1 )
 custom_fonts/font = SubResource( 2 )
-text = "Press Enter or Space for next message"
+text = "Press Enter for next message"
 align = 1
 autowrap = true
 

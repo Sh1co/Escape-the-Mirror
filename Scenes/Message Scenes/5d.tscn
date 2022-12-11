@@ -3,4 +3,4 @@
 [ext_resource path="res://Scenes/BaseDialogue.tscn" type="PackedScene" id=1]
 
 [node name="SLevel" instance=ExtResource( 1 )]
-messages = [ "Since many non reflections have come to this realm lately.", "Our brilliant scientists created the Mirror Reverse!", "When used it makes both reflection and non reflections move the same way.", "Neat, right?" ]
+messages = [ "Since many non reflections have come to this dimension lately.", "Our brilliant scientists created the Mirror Reverse!", "When used it makes both reflection and non reflections move the same way.", "Neat, right?" ]
