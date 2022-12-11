@@ -20,7 +20,13 @@ wait_time = 0.25
 one_shot = true
 autostart = true
 
+[node name="WinDelay" type="Timer" parent="."]
+one_shot = true
+
 [node name="LevelLayout" type="Area2D" parent="." groups=["Obstacle"]]
+
+[node name="LoseDelay" type="Timer" parent="."]
+wait_time = 0.5
 
 [connection signal="area_entered" from="Follower" to="Follower" method="_on_Follower_body_entered"]
 [connection signal="screen_entered" from="Follower/VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_entered"]
@@ -28,3 +34,5 @@ autostart = true
 [connection signal="area_entered" from="Mirror" to="Mirror" method="_on_Follower_body_entered"]
 [connection signal="screen_entered" from="Mirror/VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_entered"]
 [connection signal="screen_exited" from="Mirror/VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
+[connection signal="timeout" from="WinDelay" to="." method="_on_WinDelay_timeout"]
+[connection signal="timeout" from="LoseDelay" to="." method="_on_LoseDelay_timeout"]
