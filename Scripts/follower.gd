@@ -42,7 +42,7 @@ func _follow():
 
 func _on_Follower_body_entered(body):
 	if body.is_in_group("Obstacle"):
-		if fail_ps!=null:
+		if fail_ps != null:
 			_spawn_fail_sign()
 		emit_signal("lost")
 
@@ -52,8 +52,8 @@ func _on_Follower_mouse_entered():
 	$Hint.visible = false
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	emit_signal("connected")
-	
-	
+
+
 func _spawn_fail_sign():
 	var fail = fail_ps.instance()
 	fail.position = position

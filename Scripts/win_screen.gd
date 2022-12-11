@@ -1,6 +1,5 @@
 extends SLevel
 
-
 onready var tween = $Tween
 onready var gameplay_music = $"../GamePlayBGMusic"
 onready var bg_music = $"../BGMusic"

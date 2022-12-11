@@ -21,6 +21,7 @@ func _input(event):
 	if event.is_action_pressed("reload"):
 		_level_lost()
 
+
 func _on_VisibilityNotifier2D_screen_exited():
 	if !$BSDelay.is_stopped() || !$LoseDelay.is_stopped():
 		return
@@ -43,9 +44,10 @@ func _level_lost():
 	$LoseDelay.start()
 	$Follower.queue_free()
 	$Mirror.queue_free()
-	
+
+
 func _play_gameplay_music():
-	if ! gameplay_music.playing:
+	if !gameplay_music.playing:
 		bg_music.playing = false
 		gameplay_music.playing = true
 
