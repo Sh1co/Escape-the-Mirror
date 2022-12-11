@@ -1,8 +1,13 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/BaseLevel.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Art/Levels/2.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Coin.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Art/Fonts/DraconianMechanicalPencil001.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 33
+font_data = ExtResource( 4 )
 
 [node name="Level" instance=ExtResource( 1 )]
 
@@ -26,3 +31,22 @@ polygon = PoolVector2Array( 7, -337.9, 4.20001, -302, 8.29999, -286, 17, -276.1,
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="LevelLayout" index="2"]
 position = Vector2( 640, 360 )
 polygon = PoolVector2Array( 615, -107.9, 615, -106.1, 640, -97.1, 640, 360, 540.7, 360, 525, 343.2, 525, 340.7, 512, 316.8, 512, 309, 505, 248.2, 505, 203.7, 509.4, 177.7, 499.4, 121, 501.4, 121, 504.5, 104, 506.4, 104, 518, 86.2, 518, 83.4, 513, 65.4, 513, 61.7, 515.4, 48, 509, 1.20001, 509, -49.4, 511.7, -59, 513.1, -59, 519.1, -71, 520.9, -71, 550.8, -98, 553.6, -98, 586, -107.3, 586, -109.1 )
+
+[node name="Label" type="Label" parent="." index="5"]
+margin_left = 850.0
+margin_top = 523.0
+margin_right = 1157.0
+margin_bottom = 631.0
+custom_fonts/font = SubResource( 1 )
+text = "A coin!"
+align = 1
+
+[node name="Label2" type="Label" parent="." index="6"]
+margin_left = 833.0
+margin_top = 620.0
+margin_right = 1140.0
+margin_bottom = 728.0
+rect_rotation = -19.8954
+custom_fonts/font = SubResource( 1 )
+text = "<-"
+align = 1
